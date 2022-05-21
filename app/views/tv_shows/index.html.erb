@@ -1,0 +1,15 @@
+<h1 class="titulo-series">Listado de Series de TV</h1>
+<hr>
+<h3>Ingrese una serie o película nueva</h3>
+
+<%= form_with model: TvShow.new do |form| %>
+    <%= form.text_field :name %><br>
+    <%= form.text_area :summary %><br>
+    <%= form.date_field :release_date %><br>
+    <%= form.number_field :rating, step: '0.1' %><br>
+    <%= form.submit  "Enviar" %>
+<% end %>
+
+<%= "Mi nombre es: #{ @search || "***ningun dato ingresado***" }" %>
+<hr>
+<%= link_to 'go back to welcome page', welcome_path %>

@@ -1,0 +1,119 @@
+* {box-sizing: border-box;} /*mantiene la medida del div*/
+
+/*esto es fondo de página*/
+body {background-image: url("fotos/bg_02.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0;
+    }
+    
+    /*esto es mi contenedor principal*/
+div {width: 820px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    /*esto es mi header*/
+header {width: 820px;
+    height: 125px;}
+    
+    /*estos son los links del nav ubicado en el header*/
+header nav a {color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: yellow 3px solid;
+    margin-right: -15px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    transition: 1s;
+    margin-top: 50px;
+    float: right;}
+    
+    /*estos son los links que al posicionar el mouse cambia de color*/
+header nav a:hover {color:yellow;
+    border-bottom: 12px yellow solid;}
+    
+header nav image{margin-top: 20px;
+    margin-right: -30px;}
+    
+    /*esto es el nav ubicado después de la imagen banner con clase para que no se vea doble*/
+#e {width: 820px;
+    height: 32px;
+    background-color: #2c2c2c;}
+    
+nav a{color: green;
+    float: left;
+    margin-left: 50px;
+    margin-top: 6px;}
+    
+    /*esto es DESARROLLO ARMADO HTML*/
+nav p {color: white;
+    float: right;
+    margin-right: 20px;
+    margin-top: 6px;}
+    
+p {color: white; text-align: justify;}
+    
+.verdeycentrado {color: green;
+    float: left;
+    margin-top: 6px;
+    margin-inline-start: 30px;
+    margin-inline-end: -25px;}
+    
+    
+section{width: 450px;
+    height:auto;
+    float: left;
+    background-color: black;}
+    
+    /*TITULOS AMARILLOS*/
+section h1, h3 {color: yellow;
+    padding-left: 20px;
+    padding-right: 17px;}
+    
+section article {border-bottom: 4px solid red;}
+    
+h6{color: rgb(199, 199, 197);}
+    
+aside{width: 370px;
+    height: 1000px;
+    float: left;
+    margin-top: -7px;
+    background: black;}
+    
+aside img{
+    margin-top: 15px;
+    margin-left: 100px;}
+    
+aside iframe{margin-top: 15px;
+    margin-left: 40px;
+    border-bottom: orange 3px solid;}
+    
+aside p {margin-left: 60px;}
+    
+.raya{border-bottom: 2px rgb(60, 61, 60) dashed;
+    margin-top: -15px;
+    padding-bottom: 10px;}
+    
+    
+.derecho{ color: white;
+    float: left; margin-top: 6px;
+    margin-left: 25px;}
+    
+.ayu{float: right;
+    margin-top: 6px;}
+    
+.vermap{color: yellow;
+    margin-left: 50px;}
+    
+.vid{color: white;
+    float: right;
+    margin-right: 5px;}
+    
+    /*footer*/
+footer{width: 820px;
+    height: 32px;
+    clear: both;
+    background-color: #131313;}
