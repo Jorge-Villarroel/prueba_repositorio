@@ -1,4 +1,10 @@
 class TvShowsController < ApplicationController
+  
+  def search
+    @search = TvShow.where('name LIKE %?%', params[:query])
+  end
+  
+  
   def index
     @search = params[:query]
   end
