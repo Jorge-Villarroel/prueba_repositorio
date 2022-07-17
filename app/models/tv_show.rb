@@ -11,4 +11,5 @@ class TvShow < ApplicationRecord
         capitalized_words = splited_names.map { |splited_name| splited_name.capitalize } # ~> ["Game", "Of", "Thrones"]
         self.name = capitalized_words.join(' ') # ~> "Game Of Thrones"
     end
+    belongs_to :user
 end

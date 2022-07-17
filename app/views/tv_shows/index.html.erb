@@ -15,3 +15,54 @@
 <%= link_to 'go back to welcome page', welcome_path %>
 
 <%= link_to 'Search tv show', welcome_path %>
+
+<html>
+    <head>
+        <title>MyFavoriteTvSeriesM9</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+        <% if user_signed_in? %>
+            <div>
+                <p>Bienvenido <%= current_user.email %>!!</p>
+                <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+            </div>
+        <% else %>
+            <div>
+                <%= link_to 'Sign up', new_user_registration_path %> |
+                <%= link_to 'Log in', new_user_session_path %>
+            </div>
+        <% end %>
+        <%= yield %>
+    </body>
+<!--...-->
+    <tbody>
+        <% @tv_shows.each do |tv_show| %>
+            <tr>
+                <!--...-->
+                <% if user_signed_in? %>
+                    <td><%= link_to 'Show', tv_show %></td>
+                <% end %>
+                <% if (user_signed_in? && (current_user == tv_show.user)) %>
+                    <td><%= link_to 'Edit', edit_tv_show_path(tv_show) %></td>
+                    <td><%= link_to 'Destroy', tv_show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<br>
+
+<% if user_signed_in? %>
+    <%= link_to 'New Tv Show', new_tv_show_path %>
+<% end %>
+    
+</html>
+
